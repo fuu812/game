@@ -92,16 +92,16 @@ def main():
                    14 // 15, disp_w, disp_h // 15))
 
     # pushcountに応じてウィンドウの上部を水色にする
-    if pushcount >= 20:
-      pg.draw.rect(screen, 'CYAN', (0, 0, disp_w, disp_h // 15))
     if pushcount >= 30:
-      pg.draw.rect(screen, 'CYAN', (0, 0, disp_w, disp_h // 10))
+      pg.draw.rect(screen, 'CYAN', (0, 0, disp_w, disp_h // 15))
     if pushcount >= 35:
+      pg.draw.rect(screen, 'CYAN', (0, 0, disp_w, disp_h // 10))
+    if pushcount >= 40:
       pg.draw.rect(screen, 'CYAN', (0, 0, disp_w, disp_h // 5))
     if pushcount >= 45:
       pg.draw.rect(screen, 'CYAN', (0, 0, disp_w, disp_h // 4))
 
-    screen.blit(font.render(f'{pushcount}', True, 'WHITE'), (10, 20))
+    # screen.blit(font.render(f'{pushcount}', True, 'WHITE'), (10, 20))
 
     elapsed_time = time.time() - start_time
     if elapsed_time >= 10:
